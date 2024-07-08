@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrape Results</title>
+</head>
+<body>
+    <h1>Scrape Results</h1>
+    <table>
+        <tr>
+            <th>Profile Name</th>
+            <th>Emails</th>
+            <th>Phones</th>
+            <th>Links</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for message in messages %}
+        <tr>
+            <td>{{ message.profile_name }}</td>
+            <td>{{ message.emails }}</td>
+            <td>{{ message.phones }}</td>
+            <td>{{ message.links }}</td>
+            <td>{{ message.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
